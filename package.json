@@ -1,0 +1,33 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify src/main.js -o public/bundle.js",
+    "cc": "codeclimate analyze src",
+    "lint": "eslint src",
+    "start": "node ./src",
+    "test": "npm run lint; jest --colors"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "uniq": "^1.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^16.5.0",
+    "eslint": "^6.2.1",
+    "eslint-plugin-react": "^7.14.3",
+    "express": "^4.17.1",
+    "jest": "^24.9.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ]
+  }
+}
